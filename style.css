@@ -126,3 +126,8 @@
     font-size:4rem;
   }
 }
+.archive-season h2::before,
+.archive-season h2::after{
+  content:none !important;
+  display:none !important;
+}
