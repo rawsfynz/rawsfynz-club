@@ -3,3 +3,129 @@
 .connection{display:inline-block;margin-top:14px;padding:9px 14px;border:1px solid currentColor;font:700 12px/1 'Space Mono',monospace;letter-spacing:.08em}.connection[data-type="ok"]{opacity:1}.connection[data-type="warn"]{opacity:.75}.connection[data-type="error"]{opacity:1}.live-summary{border:1px solid #fff;padding:16px;margin-bottom:14px;font:700 14px/1.6 'Space Mono',monospace}.live-summary span{font-weight:400;opacity:.75}.btn:disabled{opacity:.45;cursor:wait}
 /* CEREMONY V2 */
 .grain{background:url('logo.png') center/700px no-repeat}.secret-card,.ceremony-intro,.reveal,.final,.champion{max-width:900px;margin:auto;border:1px solid #333;background:#080808;padding:55px;text-align:center}.secret-card .lock{font-size:48px;margin-bottom:12px}.secret-card h3,.ceremony-intro h3,.reveal h3,.final h3,.champion h3{font:700 clamp(34px,5vw,70px)/1.05 "UnifrakturCook",serif;margin:12px 0 25px}.secret-card p,.ceremony-intro p{color:#888;line-height:1.7}.bigbar{height:8px;background:#181818;margin:25px 0}.bigbar span{display:block;height:100%;background:#eee;transition:.4s}.ready{border:1px solid #fff;padding:12px;margin:25px 0;font-size:11px;letter-spacing:2px}.ceremony-intro img,.champion img{width:150px;max-height:150px;object-fit:contain}.ceremony-intro h3 span{font-family:"Space Mono";font-size:.5em;letter-spacing:5px}.ceremony-intro small{display:block;color:#777;margin-top:15px}.question-progress{color:#666;letter-spacing:3px;font-size:11px}.reveal h3{font-family:"Space Mono";font-size:clamp(25px,4vw,48px);text-transform:uppercase;margin:35px auto;max-width:800px}.sealed{border:1px dashed #444;color:#666;padding:40px;margin:25px 0;letter-spacing:3px}.giant{font-size:13px;padding:20px 28px}.winner{border:1px solid #eee;padding:28px;margin:20px 0 28px;font-size:10px;letter-spacing:2px}.winner strong{display:block;font:700 clamp(38px,7vw,80px) "UnifrakturCook";letter-spacing:0;margin:8px}.winner span{color:#999}.question-ranking,.title-ranking{margin:25px 0 35px;text-align:left}.rank.top{font-size:1.12em;background:#0e0e0e}.champion{padding-top:70px;padding-bottom:70px}.trophy{font-size:65px}.champion-name{font:700 clamp(65px,10vw,130px)/.9 "UnifrakturCook";margin:20px 0;text-shadow:0 0 30px #fff3}.champion p{color:#aaa}.ghost{background:transparent;color:#eee}.ghost:hover{background:#eee;color:#050505}@media(max-width:800px){.secret-card,.ceremony-intro,.reveal,.final,.champion{padding:35px 18px}}
+/* =========================================
+   RAWSFYNZ — ARCHIVES / HALL OF FAME
+========================================= */
+
+#archives{
+  padding-top:100px;
+  padding-bottom:120px;
+}
+
+#archives > h2{
+  font-size:clamp(3rem,8vw,7rem);
+  margin:5px 0 10px;
+  line-height:.9;
+}
+
+.archive-season{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  padding:70px 30px;
+  margin:40px 0 50px;
+  border:1px solid rgba(255,255,255,.35);
+  background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.9)),
+    url("logo.png") center/500px no-repeat;
+}
+
+.archive-season::before{
+  content:"HALL OF FAME";
+  position:absolute;
+  top:20px;
+  left:0;
+  width:100%;
+  font-size:11px;
+  letter-spacing:8px;
+  opacity:.45;
+}
+
+.archive-season .lock{
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.archive-season h3{
+  margin:5px 0;
+  font-size:14px;
+  letter-spacing:5px;
+}
+
+.archive-season h2{
+  font-size:clamp(4rem,10vw,8rem);
+  line-height:.9;
+  margin:20px 0;
+  text-transform:uppercase;
+}
+
+.archive-season h2::before{
+  content:"👑 ";
+}
+
+.archive-season h2::after{
+  content:" 👑";
+}
+
+.archive-season p:last-child{
+  opacity:.65;
+  letter-spacing:2px;
+}
+
+/* Liste des catégories */
+
+.archive-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.archive-question{
+  position:relative;
+  padding:25px;
+  min-height:150px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.55);
+  transition:.2s ease;
+}
+
+.archive-question:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,255,255,.65);
+  background:rgba(255,255,255,.04);
+}
+
+.archive-question .eyebrow{
+  margin:0 0 15px;
+  opacity:.45;
+}
+
+.archive-question h3{
+  margin:0 0 22px;
+  font-size:18px;
+  line-height:1.35;
+}
+
+.archive-question > p:last-child{
+  margin:0;
+  padding-top:15px;
+  border-top:1px solid rgba(255,255,255,.12);
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+/* Mobile */
+
+@media(max-width:750px){
+  .archive-list{
+    grid-template-columns:1fr;
+  }
+
+  .archive-season{
+    padding:60px 20px;
+  }
+
+  .archive-season h2{
+    font-size:4rem;
+  }
+}
